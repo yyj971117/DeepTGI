@@ -1,0 +1,20 @@
+# DeepTGI
+
+DeepTGI Model
+
+## Quick Start (Tested on Linux)
+
+  * Clone deepTGI repository
+  * Go to deepTGI repository
+  * Create conda environment
+```
+conda env create -f environment.yml
+```
+  * activate deepTGI environment
+```
+conda activate deepTGI
+```  
+  * Run the program
+```
+python main.py
+``` 
