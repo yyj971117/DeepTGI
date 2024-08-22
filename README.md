@@ -87,7 +87,11 @@ pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/bulk_tf.csv')
   * Run the program
 ```
 python main.py
-``` 
-
+```
+* Choose the appropriate script based on the dataset
+    > The main.py, main_hESC.py, and main_mHSC.py scripts are designed to work with different datasets. Make sure to use the correct script according to the dataset you want to analyze:
+     * main.py is designed for the mESC dataset (mouse embryonic stem cells).
+     * main_hESC.py is designed for the human dataset (human embryonic stem cells).
+     * main_mHSC.py is designed for the mHSC-E and mHSC-L datasets (mouse hematopoietic stem cells in early and late stages).
 
 
