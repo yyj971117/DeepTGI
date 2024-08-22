@@ -13,7 +13,7 @@ The interactions between transcription factors (TFs) and the target genes could 
 
 # Overview
 <div align=center>
-<img src="https://github.com/yyj971117/DeepTGI/blob/main/DeepTGI/Overview.png" height="600" width="800">
+<img src="https://github.com/yyj971117/DeepTGI/Overview.png" height="600" width="800">
 </div>
 
 # System Requirements
