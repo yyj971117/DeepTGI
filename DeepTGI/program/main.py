@@ -77,11 +77,10 @@ def prepare():
     def PCC(matrix):
         matrix = matrix.corr(method='spearman')
         return matrix
-    a = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/bulk_tf.csv')
-    c = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/fc_tf.csv')
-    #b = pd.read_csv('/home/zhongle/Data_test/tf_kegg_one_t.csv')
-    d = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/bulk_gene.csv')
-    f = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/fc_gene.csv')
+    a = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/scRNA-Seq/mESC/bulk_tf.csv')
+    c = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/scRNA-Seq/mESC/fc_tf.csv')
+    d = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/scRNA-Seq/mESC/bulk_gene.csv')
+    f = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/scRNA-Seq/mESC/fc_gene.csv')
         
     '''
     bulk = pd.read_csv('~/mesc/ground-truth_datasets/scRNA-seq_reprogramming_FC1/allGeneTF/bulkAllEx.csv')
@@ -95,7 +94,7 @@ def prepare():
     d=PCC(d)
     f=PCC(f)
 
-    pair_label = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/label.csv')
+    pair_label = pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/scRNA-Seq/mESC/label.csv')
 
     feature_A = []
     feature_B = []
