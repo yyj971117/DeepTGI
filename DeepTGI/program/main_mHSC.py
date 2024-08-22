@@ -581,7 +581,7 @@ def BERT_train(model, x_train, y_train, x_test, y_test, event_num):
             x, y = data
 
             lam = np.random.beta(0.5, 0.5)
-            index = torch.randperm(x.size()[0]).cuda()
+            index = torch.randperm(x.size()[0]).to(x.device)  
             inputs = lam * x + (1 - lam) * x[index, :]
 
             targets_a, targets_b = y, y[index]
@@ -701,7 +701,7 @@ def cross_val(feature, label, event_num):
         print("test len", len(y_test))
         pred_score=BERT_train(model, X_train, y_train, X_test, y_test, event_num)
         label_test['pred_score'] =  pred_score
-        label_test.to_csv('~/test_R/test_tf_gene_mESCsingle/test_label%d.csv'%od,index=False)
+        label_test.to_csv('~/DeepTGI-main/DeepTGI/test_R/test_tf_gene_mHSC-E/test_label%d.csv'%od,index=False)
         GENIE3=[]
         PPCOR=[]
         PIDC=[]
