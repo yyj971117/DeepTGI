@@ -49,6 +49,8 @@ $ conda activate deepTGI
 # Detailed tutorials with example datasets
 `DeepTGI` is a deep learning framework that utilizes autoencoders and multi-head attention mechanisms to accurately identify interactions between transcription factors and genes and infer gene regulatory networks.
 
+The example can be seen in the <a href="https://github.com/yyj971117/DeepTGI/tree/main/DeepTGI/program/main.py">main.py</a>.
+
 # DeepTGI
 
 DeepTGI Model
@@ -87,5 +89,5 @@ pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/bulk_tf.csv')
 python main.py
 ``` 
 
-The example can be seen in the <a href="https://github.com/yyj971117/DeepTGI/tree/main/DeepTGI/program/main.py">main.py</a>.
+
 
