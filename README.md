@@ -30,19 +30,20 @@ This package is supported for *Linux*. The package has been tested on the follow
 ```
 numpy
 scipy
-PyTorch
-PyTorch Lightning
+torch
+pytorch-lightning
 scikit-learn
 pandas
 scanpy
 anndata
+tensorboardX
+pytorchtools
 ```
 For specific setting, please see <a href="https://github.com/yyj971117/DeepTGI/blob/main/environment.yml">requirement</a>.
 
 # Installation Guide
 ```
-$ git clone https://github.com/yyj971117/DeepTGI/tree/main/DeepTGI.git
-$ conda create -n bis python=3.8
+$ git clone https://github.com/yyj971117/DeepTGI.git
 $ conda env create -f environment.yml
 $ conda activate deepTGI
 ```
@@ -59,7 +60,7 @@ DeepTGI Model
 
   * Clone deepTGI repository
 ```
-git clone https://github.com/wanglabhku/DeepTGI
+git clone https://github.com/yyj971117/DeepTGI.git
 ```
   * Go to deepTGI repository
 ```
@@ -76,13 +77,15 @@ conda activate deepTGI
  * Extract model files
    > Before running the program, you need to extract the model files from the split archives located in /DeepTGI/test_R. Use the following command to extract the files：
 ```
-unzip /DeepTGI/test_R/pred_nets.zip
+sudo apt-get update
+sudo apt-get install p7zip-full
+7z x pred_nets.z01
 ```  
   * Update file paths in the code
     > Before running the program, ensure that any file paths used in the code are correctly updated to match your own directory structure. This is important because the default paths in the code may not align with where you have stored the necessary files. To do this, locate the file paths in the Python scripts (e.g., in `main.py`) and modify them to reflect the actual locations of your files on your system.
-    > For example, if a file path in the code is `model_path = "/default/path/to/pred_nets/model"`, you should update it to match your directory structure, such as ：
+    > For example, If the file path in the code is pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/bulk_tf.csv'), change it to match your own directory structure.
 ```
-pd.read_csv('~/DeepTGI-main/DeepTGI/dataset/bulk_tf.csv')
+pd.read_csv('~/DeepTGI/dataset/bulk_tf.csv')
 ```
   * Run the program
 ```
